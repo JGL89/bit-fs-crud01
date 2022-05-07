@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const todosRouter = require('./routes/todos');13
@@ -7,6 +8,7 @@ const todosRouter = require('./routes/todos');13
 const server = express();
 const port = 4000;
 
+server.use(cors());
 server.use(express.json());
 server.use('/api/v1', todosRouter);
 
