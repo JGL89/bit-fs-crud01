@@ -1,7 +1,7 @@
-# Proyecto API Restful de tareas
+# Proyecto API Restful de adopciones
 ## Descripción
-Este proyecto consta de dos partes, el backend y el frontend en su respectivo 
-directorio se encuentra el código fuente del proyecto.
+Este proyecto consta de dos partes, el backend y el frontend donde en su respectivo 
+directorio está el código fuente del proyecto.
 ### Requerimientos
 * Debe tener instalado localmente NodeJS
 * Debe tener una cuenta activa en MongoDB Cloud
@@ -9,14 +9,11 @@ directorio se encuentra el código fuente del proyecto.
 ### Instrucciones
 #### Paso 1
 Para probar este proyecto debe abrir su terminal y ejecutar los siguientes comandos:
-```
 $ cd backend
-$ npm install
+$ ls
 $ npm run dev
-```
-Asegurese de no tener errores
 #### Paso 2
 Dentro del directorio frontend ejecutar en su navegador el archivo ```index.html```  
-Listo! pruebe las operaciones CRUD.
+Luego pruebe las operaciones CRUD.
 ## Software Developer
 [Juliana González López]()
