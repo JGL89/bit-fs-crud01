@@ -2,3 +2,13 @@
     background-color: red;
     color: white;
   }
+  html{
+    background-color: white;
+  }
+body {
+  font-family: sans-serif;
+  height: 100vh;
+}
+.container {background-color: greenyellow;
+
+}
