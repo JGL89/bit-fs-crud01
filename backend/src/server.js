@@ -2,11 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const todosRouter = require('./routes/todos');13
+const todosRouter = require('./routes/todos');
 
 
 const server = express();
-const port = 4000;
+const port = 4500;
 
 server.use(cors());
 server.use(express.json());
@@ -15,14 +15,12 @@ server.use('/api/v1', todosRouter);
 dotenv.config();
 
 mongoose
-  .connect(
-    'mongodb+srv://admin:ADMIN@cluster0.9d1qn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-    )
-    .then(() =>console.log('conectado con la base de datos'))
-    .catch((err) =>
-    console.log('Error al conectarse a la base de datos, erro: ' + err)
-    );
-
+  .connect(process.env.MONGODB_URI)
+  .then(() => console.log('Conectado a la base de datos'))
+  .catch((err) =>
+    console.log('Error al conectar a la base de datos, error: ' + err)
+  );
+  
 server.get('/', (request, response) => {
     response.send('Hola desde la raíz');
   });
